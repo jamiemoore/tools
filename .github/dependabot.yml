@@ -4,3 +4,6 @@ updates:
     directory: "/" # Location of your Dockerfile
     schedule:
       interval: "daily" # You can choose daily, weekly, or monthly
+      # day: "monday" # You can choose any day of the week
+      time: "20:30"
+      timezone: "Australia/Melbourne"
