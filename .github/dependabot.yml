@@ -4,4 +4,3 @@ updates:
     directory: "/" # Location of your Dockerfile
     schedule:
       interval: "daily" # You can choose daily, weekly, or monthly
-    versioning-strategy: "auto"
