@@ -11,3 +11,4 @@ Docker Container with useful tools for diagnosis and troubleshooting
 - Small attack surface
 - Keep in sync with upstream/parent/base releases
 - Secure based on the above requirements
+- superfluous
