@@ -1,9 +1,14 @@
 version: 2
 updates:
-  - package-ecosystem: "docker"
-    directory: "/" # Location of your Dockerfile
+  - package-ecosystem: github-actions
+    directory: /
     schedule:
-      interval: "daily" # You can choose daily, weekly, or monthly
-      # day: "monday" # You can choose any day of the week
+      interval: "daily"
+      time: "15:30"
+      timezone: "Australia/Melbourne"
+  - package-ecosystem: "docker"
+    directory: "/"
+    schedule:
+      interval: "daily"
       time: "20:30"
       timezone: "Australia/Melbourne"

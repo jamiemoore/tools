@@ -1,0 +1,70 @@
+# .github/workflows/build.yml
+name: Continuous Integration
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build-test-push:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v4
+
+    - name: Set up QEMU
+      uses: docker/setup-qemu-action@v3
+
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v3
+  
+    # - name: Build Docker image
+    #   uses: docker/build-push-action@v6
+    #   with:
+    #     context: .
+    #     platform: linux/amd64,linux/arm64 #decide if I want to build for arm64
+    #     load: true
+    #     tags: ${{ github.repository }}:test
+    #     cache-from: type=gha
+    #     cache-to: type=gha,mode=max
+
+    - name: build
+      run: make build
+
+    - name: setup bats
+      uses: bats-core/bats-action@3.0.0
+      with:
+        # bats-version: "1.10.0"
+        support-install: false
+        assert-install: false
+        detik-install: false
+        file-install: false
+
+    - name: smoke tests
+      run: make smoke
+
+
+  # this is the block that matters:
+  # dependabot:
+  #   needs: [build] # <-- important!
+  #   runs-on: ubuntu-latest
+  #   permissions:
+  #     pull-requests: write
+  #     contents: write
+  #   if: ${{ github.actor == 'dependabot[bot]' && github.event_name == 'pull_request'}}
+  #   steps:
+  #     - id: metadata
+  #       uses: dependabot/fetch-metadata@v2
+  #       with:
+  #         github-token: "${{ secrets.GITHUB_TOKEN }}"
+  #     - run: |
+  #         gh pr review --approve "$PR_URL"
+  #         gh pr merge --squash --auto "$PR_URL"
+  #       env:
+  #         PR_URL: ${{github.event.pull_request.html_url}}
+  #         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
