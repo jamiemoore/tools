@@ -4,7 +4,7 @@
 [ -z "$IMAGE_TAG" ] && echo "ERROR: IMAGE_TAG environment variable must be set" && exit 1
 
 IMAGE_ID="${IMAGE_NAME}:${IMAGE_TAG}"
-REQUIRED_TOOLS=(bash curl dig grep jq ping yq ansible)
+REQUIRED_TOOLS=(bash curl dig grep jq ping)
 
 check_tool_installed () {
     local tool=$1
