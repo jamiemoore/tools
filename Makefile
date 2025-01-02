@@ -4,6 +4,7 @@ GIT_SHA := $(shell git rev-parse --short HEAD)
 GIT_DIRTY := $(shell git status --porcelain)
 IMAGE_TAG := $(GIT_SHA)$(if $(GIT_DIRTY),-dirty,)
 DOCKER_FILE := Dockerfile
+BATS_FORMAT ?= pretty
 
 .PHONY: all help ci build test run smoke history clean 
 
@@ -30,4 +31,4 @@ run: ## Run Dockerfile
 	docker run -it --rm $(IMAGE_NAME):$(IMAGE_TAG)
 
 smoke: ## Run smoke tests
-	IMAGE_NAME=$(IMAGE_NAME) IMAGE_TAG=$(IMAGE_TAG) bats --formatter pretty --timing -x -r tests/smoke
+	IMAGE_NAME=$(IMAGE_NAME) IMAGE_TAG=$(IMAGE_TAG) bats --formatter $(BATS_FORMAT) --timing -x -r tests/smoke

@@ -51,6 +51,7 @@ jobs:
       env:
         BATS_LIB_PATH: ${{ steps.setup-bats.outputs.lib-path }}
         TERM: xterm
+        BATS_FORMAT: tap
       run: make smoke
 
 
