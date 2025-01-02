@@ -41,7 +41,8 @@ jobs:
         BATS_FORMAT: tap
       run: make smoke
 
-  pr-dependabot:
+  pr-dependabot-automerge:
+    name: ${{ github.actor == 'dependabot[bot]' && github.event_name == 'pull_request' && 'Dependabot auto-merge' || '' }}
     needs: [pr-build-test]
     runs-on: ubuntu-latest
     permissions:
