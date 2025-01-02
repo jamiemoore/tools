@@ -6,9 +6,13 @@ updates:
       interval: "daily"
       time: "15:30"
       timezone: "Australia/Melbourne"
+    labels:
+      - github-actions
   - package-ecosystem: "docker"
     directory: "/"
     schedule:
       interval: "daily"
       time: "20:30"
       timezone: "Australia/Melbourne"
+    labels:
+      - docker
