@@ -85,3 +85,11 @@ repos:
         #   - build
         #   - ci
         #   - chore
+
+  - repo: local
+    hooks:
+      - id: make-ci
+        name: Run local ci
+        entry: make ci
+        language: system
+        pass_filenames: false
