@@ -1,0 +1,87 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      # File hygiene
+      - id: trailing-whitespace # Removes trailing whitespace
+      - id: end-of-file-fixer # Ensures files end with a newline
+      - id: mixed-line-ending # Consistent line endings
+        args: ["--fix=lf"]
+      - id: check-case-conflict # Checks for files with names that would conflict on case-insensitive filesystems
+
+      # File format validation
+      - id: check-yaml # Validates YAML syntax
+        args: [--allow-multiple-documents]
+      - id: check-json # Validates JSON syntax
+      - id: check-toml # Validates TOML syntax
+      - id: check-xml # Validates XML syntax
+
+      # Security
+      - id: detect-private-key # Checks for committed private keys
+
+      # Git specific
+      - id: check-merge-conflict # Checks for files containing merge conflict strings
+
+      # General checks
+      - id: check-added-large-files # Prevents giant files from being committed
+        args: ["--maxkb=500"]
+      - id: check-executables-have-shebangs # Checks that executables have shebangs
+      - id: check-shebang-scripts-are-executable # Checks script files have executable permission
+      - id: check-symlinks # Checks for broken symlinks
+      - id: destroyed-symlinks # Detects symlinks changed to regular files
+
+      # Content checks
+      - id: check-ast # Checks Python ast
+      - id: debug-statements # Check for debugger imports and breakpoints in Python
+      - id: requirements-txt-fixer # Sorts entries in requirements.txt
+      - id: fix-byte-order-marker # Removes UTF-8 BOM
+
+  # Additional useful hooks from other repositories
+  - repo: https://github.com/sirosen/check-jsonschema
+    rev: 0.30.0
+    hooks:
+      - id: check-github-workflows # Validate GitHub Actions workflow files
+      - id: check-github-actions # Check GitHub Actions workflow files for pinned actions
+
+  - repo: https://github.com/lucas-c/pre-commit-hooks
+    rev: v1.5.5
+    hooks:
+      - id: forbid-crlf # Forbid files containing CRLF end-lines being committed
+      - id: remove-crlf # Remove CRLF from files
+      - id: forbid-tabs # Forbid files containing tabs being committed
+      - id: remove-tabs # Replace tabs with spaces
+
+  - repo: https://github.com/IamTheFij/docker-pre-commit
+    rev: v3.0.1
+    hooks:
+      - id: docker-compose-check # Validate docker-compose files
+
+  # Security scanning
+  - repo: https://github.com/zricethezav/gitleaks
+    rev: v8.22.1
+    hooks:
+      - id: gitleaks # Scan for hardcoded secrets
+
+  - repo: https://github.com/shellcheck-py/shellcheck-py
+    rev: v0.10.0.1
+    hooks:
+      - id: shellcheck # Shell script analysis
+        args: [--severity=warning] # Only show warnings and errors
+
+  # Conventional commits enforcement
+  - repo: https://github.com/compilerla/conventional-pre-commit
+    rev: v4.0.0
+    hooks:
+      - id: conventional-pre-commit
+        stages: [commit-msg]
+        # args:
+        #   - feat
+        #   - fix
+        #   - docs
+        #   - style
+        #   - refactor
+        #   - perf
+        #   - test
+        #   - build
+        #   - ci
+        #   - chore
