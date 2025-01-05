@@ -20,7 +20,7 @@ jobs:
 
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v3
-  
+
     - name: build
       run: make build
 
@@ -41,6 +41,7 @@ jobs:
         BATS_FORMAT: tap
       run: make smoke
 
+  # This will show as skipped, requests to hide them has been ongoing for years
   pr-dependabot-automerge:
     needs: [pr-build-test]
     runs-on: ubuntu-latest
