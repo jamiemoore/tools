@@ -1,3 +1,6 @@
+default_install_hook_types:
+  - pre-commit
+  - commit-msg
 default_stages: [pre-commit]
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
@@ -6,49 +9,23 @@ repos:
       # File hygiene
       - id: trailing-whitespace # Removes trailing whitespace
       - id: end-of-file-fixer # Ensures files end with a newline
-      # # File format validation
-      # - id: check-yaml # Validates YAML syntax
-      #   args: [--allow-multiple-documents]
-      # - id: check-json # Validates JSON syntax
-      # - id: check-toml # Validates TOML syntax
-      # - id: check-xml # Validates XML syntax
-      # # Git specific
-      # - id: check-merge-conflict # Checks for files containing merge conflict strings
-      # # General checks
-      # - id: check-added-large-files # Prevents giant files from being committed
-      #   args: ["--maxkb=500"]
-
-  # Additional useful hooks from other repositories
-  # - repo: https://github.com/sirosen/check-jsonschema
-  #   rev: 0.30.0
-  #   hooks:
-  #     - id: check-github-workflows # Validate GitHub Actions workflow files
-  #     - id: check-github-actions # Check GitHub Actions workflow files for pinned actions
-
-  # - repo: https://github.com/lucas-c/pre-commit-hooks
-  #   rev: v1.5.5
-  #   hooks:
-  #     - id: forbid-crlf # Forbid files containing CRLF end-lines being committed
-  #     - id: remove-crlf # Remove CRLF from files
-  #     - id: forbid-tabs # Forbid files containing tabs being committed
-  #     - id: remove-tabs # Replace tabs with spaces
-
-  # - repo: https://github.com/IamTheFij/docker-pre-commit
-  #   rev: v3.0.1
-  #   hooks:
-  #     - id: docker-compose-check # Validate docker-compose files
+      # File format validation
+      - id: check-yaml # Validates YAML syntax
+        args: [--allow-multiple-documents]
+      - id: check-json # Validates JSON syntax
+      - id: check-toml # Validates TOML syntax
+      - id: check-xml # Validates XML syntax
+      # Git specific
+      - id: check-merge-conflict # Checks for files containing merge conflict strings
+      # General checks
+      - id: check-added-large-files # Prevents giant files from being committed
+        args: ["--maxkb=500"]
 
   # Security scanning
   - repo: https://github.com/zricethezav/gitleaks
     rev: v8.22.1
     hooks:
       - id: gitleaks # Scan for hardcoded secrets
-
-  # - repo: https://github.com/shellcheck-py/shellcheck-py
-  #   rev: v0.10.0.1
-  #   hooks:
-  #     - id: shellcheck # Shell script analysis
-  #       args: [--severity=warning] # Only show warnings and errors
 
   # Conventional commits enforcement
   - repo: https://github.com/compilerla/conventional-pre-commit
