@@ -6,6 +6,9 @@ updates:
       interval: "daily"
       time: "15:30"
       timezone: "Australia/Melbourne"
+    commit-message:
+      prefix: fix
+      include: scope
     labels:
       - github-actions
 
@@ -15,5 +18,9 @@ updates:
       interval: "daily"
       time: "17:30"
       timezone: "Australia/Melbourne"
+    commit-message:
+      prefix: fix
+      include: scope
+
     labels:
       - docker
