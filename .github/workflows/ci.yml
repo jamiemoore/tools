@@ -16,6 +16,9 @@ jobs:
     steps:
     - name: Check out code
       uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+        persist-credentials: false
 
     - name: Set up QEMU
       uses: docker/setup-qemu-action@v3
