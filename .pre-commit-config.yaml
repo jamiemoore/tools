@@ -1,3 +1,8 @@
+# todo: Run make ci after everything else
+# todo: Run Conventonal commit first
+# pre-commit does not have native dependency handling
+# the commit-msg phase of git runs after the pre-commit phase
+
 default_install_hook_types:
   - commit-msg
   - pre-commit
