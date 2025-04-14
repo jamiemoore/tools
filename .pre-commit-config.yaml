@@ -1,5 +1,6 @@
 # todo: Run make ci after everything else
 # todo: Run Conventonal commit first
+# todo: work out a way of keeping the versions in this file updated
 # pre-commit does not have native dependency handling
 # the commit-msg phase of git runs after the pre-commit phase
 
