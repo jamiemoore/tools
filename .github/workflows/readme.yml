@@ -1,0 +1,30 @@
+# .github/workflows/ci.yml
+name: docs
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'README.md'
+      - '.github/workflows/readme.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  update-dockerhub-readme:
+    runs-on: ubuntu-latest
+    environment: ci
+
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v4
+
+    - name: Update Docker Hub Description
+      uses: peter-evans/dockerhub-description@v4
+      with:
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_TOKEN }}
+        repository: ${{ secrets.DOCKERHUB_USERNAME }}/${{ github.event.repository.name }}
+        short-description: ${{ github.event.repository.description }}
+        readme-filepath: ./README.md
