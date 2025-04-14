@@ -1,5 +1,9 @@
 # tools
 
+![GitHub Actions Workflow Status](https://github.com/jamiemoore/repository/actions/workflows/ci.yml/badge.svg)
+
+
+
 Docker Container with useful tools for diagnosis and troubleshooting
 
 ## Project Requirements
