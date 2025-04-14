@@ -12,6 +12,7 @@ jobs:
   ci-build-test-release:
     runs-on: ubuntu-latest
     environment: ci
+    if: github.actor != 'semantic-release-bot'
 
     steps:
     - name: Check out code
