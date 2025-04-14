@@ -1,7 +1,9 @@
 default_install_hook_types:
-  - pre-commit
   - commit-msg
+  - pre-commit
+  - pre-push
 default_stages: [pre-commit]
+fail_fast: true
 repos:
   # Conventional commits enforcement
   - repo: https://github.com/compilerla/conventional-pre-commit
