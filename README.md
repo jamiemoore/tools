@@ -21,7 +21,7 @@ Tools for diagnosis and troubleshooting in a small Docker container
 ## Usage
 
 ```
-docker run -it --rm jamie/tools:1.3.1
+docker run -it --rm jamie/tools:1.3.2
 ```
 
 ## Development
