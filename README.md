@@ -6,9 +6,7 @@
 [![Docker Image Pulls](https://img.shields.io/docker/pulls/jamie/tools)](https://hub.docker.com/r/jamie/tools)
 [![Docker Image Stars](https://img.shields.io/docker/stars/jamie/tools)](https://hub.docker.com/r/jamie/tools)
 
-Tools for diagnosis and troubleshooting
-
-
+Tools for diagnosis and troubleshooting with the following features:
 
 - Interactive Shell
 
@@ -24,7 +22,7 @@ Tools for diagnosis and troubleshooting
 
 - Secure based on the above requirements
 
-- Simple Docker File
+- Simple Dockerfile
 
 
 
