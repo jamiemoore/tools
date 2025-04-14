@@ -6,17 +6,27 @@
 [![Docker Image Pulls](https://img.shields.io/docker/pulls/jamie/tools)](https://hub.docker.com/r/jamie/tools)
 [![Docker Image Stars](https://img.shields.io/docker/stars/jamie/tools)](https://hub.docker.com/r/jamie/tools)
 
-Tools for diagnosis and troubleshooting in a small Docker container
+Tools for diagnosis and troubleshooting
 
-## Project Requirements
+
 
 - Interactive Shell
+
 - Package Manager
+
 - Preinstalled set of tools
+
 - Small image size
+
 - Small attack surface
+
 - Keep in sync with upstream/parent/base releases
+
 - Secure based on the above requirements
+
+- Simple Docker File
+
+
 
 ## Usage
 
