@@ -4,25 +4,27 @@
         "@semantic-release/commit-analyzer",
         "@semantic-release/release-notes-generator",
         "@semantic-release/github",
-        "semantic-release-replace-plugin",
-        {
-            "replacements": [
+        [
+            "semantic-release-replace-plugin",
             {
-                "files": ["README.md"],
-                "from": "(\\d+\\.\\d+\\.\\d+)",
-                "to": "${nextRelease.version}",
-                "results": [
+                "replacements": [
                     {
-                    "file": "README.md",
-                    "hasChanged": true,
-                    "numMatches": 1,
-                    "numReplacements": 1
+                        "files": ["README.md"],
+                        "from": "(\\d+\\.\\d+\\.\\d+)",
+                        "to": "${nextRelease.version}",
+                        "results": [
+                            {
+                                "file": "README.md",
+                                "hasChanged": true,
+                                "numMatches": 1,
+                                "numReplacements": 1
+                            }
+                        ],
+                        "countMatches": true
                     }
-                ],
-                "countMatches": true
+                ]
             }
-            ]
-        },
+        ],
         "@semantic-release/changelog",
         {
             "changelogFile": "CHANGELOG.md",
