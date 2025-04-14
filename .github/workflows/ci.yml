@@ -9,8 +9,9 @@ permissions:
   contents: write
 
 jobs:
-  ci-build-test-publish:
+  ci-build-test-release:
     runs-on: ubuntu-latest
+    environment: ci
 
     steps:
     - name: Check out code
