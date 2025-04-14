@@ -4,6 +4,9 @@ name: ci
 on:
   push:
     branches: [ main ]
+    paths-ignore:
+      - 'README.md'
+      - 'CHANGELOG.md'
 
 permissions:
   contents: write
@@ -12,7 +15,6 @@ jobs:
   ci-build-test-release:
     runs-on: ubuntu-latest
     environment: ci
-    if: github.actor != 'semantic-release-bot'
 
     steps:
     - name: Check out code
