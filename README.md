@@ -1,8 +1,13 @@
 # tools
 
-![Build Status](https://github.com/jamiemoore/tools/workflows/ci/badge.svg)
+[![Build Status](https://github.com/jamiemoore/tools/workflows/ci/badge.svg)](https://github.com/jamiemoore/tools/actions/workflows/ci.yml)
+[![Docker Image Version](https://img.shields.io/docker/v/jamie/tools)](https://hub.docker.com/r/jamie/tools)
+[![Docker Image Size](https://img.shields.io/docker/image-size/jamie/tools)](https://hub.docker.com/r/jamie/tools)
+[![Docker Image Pulls](https://img.shields.io/docker/pulls/jamie/tools)](https://hub.docker.com/r/jamie/tools)
+[![Docker Image Stars](https://img.shields.io/docker/stars/jamie/tools)](https://hub.docker.com/r/jamie/tools)
+[![GitHub Release)](https://img.shields.io/github/v/release/jamiemoore/tools)](https://github.com/jamiemoore/tools/releases)
 
-Docker Container with useful tools for diagnosis and troubleshooting
+Tools for diagnosis and troubleshooting in a small Docker container
 
 ## Project Requirements
 
