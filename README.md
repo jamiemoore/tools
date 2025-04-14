@@ -18,12 +18,10 @@ Tools for diagnosis and troubleshooting in a small Docker container
 - Keep in sync with upstream/parent/base releases
 - Secure based on the above requirements
 
-<!-- VERSION -->0.0.0<!-- /VERSION -->
-
 ## Usage
 
 ```
-docker run -it --rm jamie/tools:<!-- VERSION -->0.0.0<!-- /VERSION -->
+docker run -it --rm jamie/tools:0.0.0
 ```
 
 ## Development
@@ -53,5 +51,3 @@ pre-commit install
   ```
   make ci
   ```
-
--

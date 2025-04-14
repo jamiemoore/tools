@@ -4,13 +4,34 @@
         "@semantic-release/commit-analyzer",
         "@semantic-release/release-notes-generator",
         "@semantic-release/github",
-        "@semantic-release/npm",
-        [
-            "semantic-release-readme",
+        "semantic-release-replace-plugin",
+        {
+            "replacements": [
             {
-                "version": "${nextRelease.version}",
-                "readmeFile": "README.md"
+                "files": ["README.md"],
+                "from": "(\\d+\\.\\d+\\.\\d+)",
+                "to": "${nextRelease.version}",
+                "results": [
+                    {
+                    "file": "README.md",
+                    "hasChanged": true,
+                    "numMatches": 1,
+                    "numReplacements": 1
+                    }
+                ],
+                "countMatches": true
             }
-        ]
+            ]
+        },
+        "@semantic-release/changelog",
+        {
+            "changelogFile": "CHANGELOG.md",
+            "changelogTitle": "# Changelog"
+        },
+        "@semantic-release/git",
+        {
+            "assets": ["README.md", "CHANGELOG.md"],
+            "message": "chore(release): v${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+        }
     ]
 }
