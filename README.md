@@ -5,7 +5,6 @@
 [![Docker Image Size](https://img.shields.io/docker/image-size/jamie/tools)](https://hub.docker.com/r/jamie/tools)
 [![Docker Image Pulls](https://img.shields.io/docker/pulls/jamie/tools)](https://hub.docker.com/r/jamie/tools)
 [![Docker Image Stars](https://img.shields.io/docker/stars/jamie/tools)](https://hub.docker.com/r/jamie/tools)
-[![GitHub Release)](https://img.shields.io/github/v/release/jamiemoore/tools)](https://github.com/jamiemoore/tools/releases)
 
 Tools for diagnosis and troubleshooting in a small Docker container
 
@@ -19,4 +18,40 @@ Tools for diagnosis and troubleshooting in a small Docker container
 - Keep in sync with upstream/parent/base releases
 - Secure based on the above requirements
 
+<!-- VERSION -->0.0.0<!-- /VERSION -->
+
+## Usage
+
+```
+docker run -it --rm jamie/tools:<!-- VERSION -->0.0.0<!-- /VERSION -->
+```
+
 ## Development
+
+Please remember to install the git hooks
+
+```
+pre-commit install
+```
+
+### Task Runner
+
+- Building the image
+
+  ```
+  make build
+  ```
+
+- Running the tests
+
+  ```
+  make smoke
+  ```
+
+- Running local ci pipeline
+
+  ```
+  make ci
+  ```
+
+-
