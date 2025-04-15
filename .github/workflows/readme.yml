@@ -1,5 +1,5 @@
 # .github/workflows/readme.yml
-name: docs
+name: readme
 
 on:
   push:
