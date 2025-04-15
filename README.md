@@ -62,7 +62,7 @@ pre-commit install
   make smoke
   ```
 
-- Running local ci pipeline (does not perform a release)
+- Running local ci pipeline (does not push the docker image)
 
   ```
   make ci
