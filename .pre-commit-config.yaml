@@ -44,6 +44,7 @@ repos:
   - repo: local
     hooks:
       - id: make-ci
+        exclude: "^(README.md)"
         name: make ci
         entry: make ci
         language: system

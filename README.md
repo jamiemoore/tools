@@ -48,7 +48,7 @@ Please remember to install the git hooks
 pre-commit install
 ```
 
-### Task Runner
+
 
 - Building the image
 
@@ -62,7 +62,7 @@ pre-commit install
   make smoke
   ```
 
-- Running local ci pipeline
+- Running local ci pipeline (does not perform a release)
 
   ```
   make ci
