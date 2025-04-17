@@ -8,7 +8,7 @@ permissions:
   contents: read
 
 jobs:
-  pr-build-test:
+  pr-tests:
     runs-on: ubuntu-latest
 
     steps:
@@ -43,7 +43,7 @@ jobs:
 
   # This will show as skipped, requests to hide them has been ongoing for years
   pr-dependabot-automerge:
-    needs: [pr-build-test]
+    needs: [pr-tests]
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write
