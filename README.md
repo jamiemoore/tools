@@ -5,7 +5,7 @@
 [![Docker Image Size](https://img.shields.io/docker/image-size/jamie/tools)](https://hub.docker.com/r/jamie/tools)
 [![Docker Image Pulls](https://img.shields.io/docker/pulls/jamie/tools)](https://hub.docker.com/r/jamie/tools)
 [![Docker Image Stars](https://img.shields.io/docker/stars/jamie/tools)](https://hub.docker.com/r/jamie/tools)
-[![License](https://img.shields.io/github/license/jamie/tools)](https://opensource.org/licenses/MIT)
+[![License](https://img.shields.io/github/license/jamiemoore/tools)](https://opensource.org/licenses/MIT)
 
 Tools for diagnosis and troubleshooting with the following features:
 
