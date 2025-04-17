@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.11](https://github.com/jamiemoore/tools/compare/v1.3.10...v1.3.11) (2025-04-17)
+
+
+### Bug Fixes
+
+* **doco:** fix license ([892dbe7](https://github.com/jamiemoore/tools/commit/892dbe76d813ab99f40f96e11d19e9cdab948f75))
+
 ## [1.3.10](https://github.com/jamiemoore/tools/compare/v1.3.9...v1.3.10) (2025-04-17)
 
 
