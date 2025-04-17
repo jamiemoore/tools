@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.8](https://github.com/jamiemoore/tools/compare/v1.3.7...v1.3.8) (2025-04-17)
+
+
+### Bug Fixes
+
+* dummy change 3 ([e49ddf2](https://github.com/jamiemoore/tools/commit/e49ddf2d289939305e37f5560a7dad07a5324f50))
+
 ## [1.3.7](https://github.com/jamiemoore/tools/compare/v1.3.6...v1.3.7) (2025-04-17)
 
 
