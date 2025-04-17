@@ -32,3 +32,5 @@ run: ## Run Dockerfile
 
 smoke: ## Run smoke tests
 	@IMAGE_NAME=$(IMAGE_NAME) IMAGE_TAG=$(IMAGE_TAG) bats --formatter $(BATS_FORMAT) --timing -x -r tests/smoke
+
+#
