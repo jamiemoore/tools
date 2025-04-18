@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.16](https://github.com/jamiemoore/tools/compare/v1.3.15...v1.3.16) (2025-04-18)
+
+
+### Bug Fixes
+
+* **build:** reset to allow unsigned commits ([374cd41](https://github.com/jamiemoore/tools/commit/374cd41fd0d6e783cd4eec2eff5498cc25fe99a0))
+
 ## [1.3.11](https://github.com/jamiemoore/tools/compare/v1.3.10...v1.3.11) (2025-04-17)
 
 
