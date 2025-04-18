@@ -31,6 +31,13 @@
                     "changelogFile": "CHANGELOG.md",
                     "changelogTitle": "# Changelog"
                 }
+        ],
+        [
+            "@semantic-release/git",
+            {
+                "assets": ["README.md", "CHANGELOG.md"],
+                "message": "chore(docs): release v${nextRelease.version}"
+            }
         ]
     ]
 }

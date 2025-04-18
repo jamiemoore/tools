@@ -58,7 +58,7 @@ jobs:
           @semantic-release/git
           semantic-release-replace-plugin
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
 
     - name: Login to Docker Hub
       if: steps.semantic-release.outputs.new_release_published == 'true'
