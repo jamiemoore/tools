@@ -1,0 +1,31 @@
+{
+  "name": "tools",
+  "version": "1.0.0",
+  "description": "[![Build Status](https://github.com/jamiemoore/tools/workflows/ci/badge.svg)](https://github.com/jamiemoore/tools/actions/workflows/ci.yml) [![healthchecks.io](https://healthchecks.io/badge/27bf2f53-c0ef-4517-86df-6b10f21c732e/CpsP3JLr-2.svg)](https://healthchecks.io/) [![Docker Image Version](https://img.shields.io/docker/v/jamie/tools)](https://hub.docker.com/r/jamie/tools) [![Docker Image Size](https://img.shields.io/docker/image-size/jamie/tools)](https://hub.docker.com/r/jamie/tools) [![Docker Image Pulls](https://img.shields.io/docker/pulls/jamie/tools)](https://hub.docker.com/r/jamie/tools) [![Docker Image Stars](https://img.shields.io/docker/stars/jamie/tools)](https://hub.docker.com/r/jamie/tools) [![License](https://img.shields.io/github/license/jamiemoore/tools)](https://opensource.org/licenses/MIT)",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamiemoore/tools.git"
+  },
+  "keywords": [],
+  "author": "Jamie Moore",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jamiemoore/tools/issues"
+  },
+  "homepage": "https://github.com/jamiemoore/tools#readme",
+  "devDependencies": {
+    "bats": "^1.11.1",
+    "markdownlint-cli": "^0.44.0",
+    "yaml-lint": "^1.7.0"
+  },
+  "engines": {
+    "node": "^23.11.0",
+    "npm": "^10.9.2"
+  }
+}
