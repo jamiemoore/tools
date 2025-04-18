@@ -41,7 +41,7 @@ jobs:
         detik-install: false
         file-install: false
 
-    - name: smoke tests
+    - naXme: smoke tests
       shell: bash
       env:
         BATS_LIB_PATH: ${{ steps.setup-bats.outputs.lib-path }}
@@ -78,7 +78,7 @@ jobs:
           ${{ secrets.DOCKERHUB_USERNAME }}/${{ github.event.repository.name }}:${{ steps.semantic-release.outputs.new_release_version }}
 
     - uses: sarisia/actions-status-discord@v1
-      if: always()
+      if: failure()
       with:
         username: GitHub Workflow Alert
         content: "@everyone"
