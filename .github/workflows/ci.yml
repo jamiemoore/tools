@@ -84,3 +84,7 @@ jobs:
         content: "${{ github.event.repository.name }} ${{ github.workflow }} workflow has failed, tell @everyone"
         url: "https://github.com/jamiemoore/tools/actions/workflows/ci.yml"
         webhook: ${{ secrets.DISCORD_WEBHOOK }}
+
+    - name: healthcheck ping
+      if: success()
+      run: curl -m 10 --retry 5 ${{ secrets.PING_URL }}
