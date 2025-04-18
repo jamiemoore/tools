@@ -5,7 +5,6 @@
 [![Docker Image Size](https://img.shields.io/docker/image-size/jamie/tools)](https://hub.docker.com/r/jamie/tools)
 [![Docker Image Pulls](https://img.shields.io/docker/pulls/jamie/tools)](https://hub.docker.com/r/jamie/tools)
 [![Docker Image Stars](https://img.shields.io/docker/stars/jamie/tools)](https://hub.docker.com/r/jamie/tools)
-[![semantic-release: conventional-commits](https://img.shields.io/badge/semantic--release-conventional--commits-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
 [![License](https://img.shields.io/github/license/jamiemoore/tools)](https://opensource.org/licenses/MIT)
 
 Tools for diagnosis and troubleshooting with the following features:
@@ -40,6 +39,8 @@ Running a tool within the container
 docker run --rm jamie/tools:1.3.16 dig www.google.com
 ```
 
+
+
 ## Development
 
 Please remember to install the git hooks
@@ -65,3 +66,9 @@ pre-commit install
   ```
   make ci
   ```
+
+### Sematic Release
+
+* Sematic release requires a Github PAT so it can bypass PR requirements and trigger another workflow, i.e. the docker hub readme updater.
+* Sematic release is not currently configured to use signed commits, so the branch protection that requires signed commits is disabled.
+* Only the options that commit code back, such as changelog and readme have the above requirements.  It is not needed by the release or the tagging.
