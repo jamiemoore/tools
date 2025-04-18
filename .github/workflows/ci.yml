@@ -47,7 +47,7 @@ jobs:
         BATS_LIB_PATH: ${{ steps.setup-bats.outputs.lib-path }}
         TERM: xterm
         BATS_FORMAT: tap
-      run: make smXoke
+      run: make smoXke
 
     - name: Semantic Release
       id: semantic-release
