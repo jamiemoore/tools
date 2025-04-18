@@ -41,13 +41,13 @@ jobs:
         detik-install: false
         file-install: false
 
-    - naXme: smoke tests
+    - name: smoke tests
       shell: bash
       env:
         BATS_LIB_PATH: ${{ steps.setup-bats.outputs.lib-path }}
         TERM: xterm
         BATS_FORMAT: tap
-      run: make smoke
+      run: make smXoke
 
     - name: Semantic Release
       id: semantic-release
