@@ -21,6 +21,17 @@ updates:
     commit-message:
       prefix: fix
       include: scope
-
     labels:
       - docker
+
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+      time: "10:30"
+      timezone: "Australia/Melbourne"
+    commit-message:
+      prefix: fix
+      include: scope
+    labels:
+      - npm
