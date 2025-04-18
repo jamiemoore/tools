@@ -81,6 +81,6 @@ jobs:
       if: failure()
       with:
         username: GitHub Workflow Alert
-        content: "${{ github.event.repository.name }} workflow failed"
+        content: "repo: ${{ github.event.repository.name }} workflow failed"
         url: "https://github.com/jamiemoore/tools/actions/workflows/ci.yml"
         webhook: ${{ secrets.DISCORD_WEBHOOK }}
