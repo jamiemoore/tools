@@ -3,6 +3,27 @@
     "plugins": [
         "@semantic-release/commit-analyzer",
         "@semantic-release/release-notes-generator",
-        "@semantic-release/github"
+        "@semantic-release/github",
+        [
+            "semantic-release-replace-plugin",
+            {
+                "replacements": [
+                    {
+                        "files": ["README.md"],
+                        "from": "(\\d+\\.\\d+\\.\\d+)",
+                        "to": "${nextRelease.version}",
+                        "results": [
+                            {
+                                "file": "README.md",
+                                "hasChanged": true,
+                                "numMatches": 2,
+                                "numReplacements": 2
+                            }
+                        ],
+                        "countMatches": true
+                    }
+                ]
+            }
+        ]
     ]
 }
