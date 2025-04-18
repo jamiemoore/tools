@@ -25,6 +25,8 @@ Tools for diagnosis and troubleshooting with the following features:
 
 - Simple Dockerfile
 
+
+
 ## Usage
 
 Interactive Shell
@@ -72,3 +74,11 @@ pre-commit install
 * Sematic release requires a Github PAT so it can bypass PR requirements and trigger another workflow, i.e. the docker hub readme updater.
 * Sematic release is not currently configured to use signed commits, so the branch protection that requires signed commits is disabled.
 * Only the options that commit code back, such as changelog and readme have the above requirements.  It is not needed by the release or the tagging.
+
+### Alerting
+
+* Alerts for failed workflows are sent to a discord channel which is configured by webhook
+
+  ```
+  gh secret set DISCORD_WEBHOOK -e ci -r jamiemoore/tools
+  ```

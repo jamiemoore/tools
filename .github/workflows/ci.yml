@@ -80,4 +80,6 @@ jobs:
     - uses: sarisia/actions-status-discord@v1
       if: always()
       with:
+        username: GitHub Workflow
+        status: ${{ job.status }}
         webhook: ${{ secrets.DISCORD_WEBHOOK }}
