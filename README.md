@@ -72,10 +72,16 @@ pre-commit install
 - Sematic release is not currently configured to use signed commits, so the branch protection that requires signed commits is disabled.
 - Only the options that commit code back, such as changelog and readme have the above requirements. It is not needed by the release or the tagging.
 
-### Alerting
+### Monitoring and Alerting
 
 - Alerts for failed workflows are sent to a discord channel which is configured by webhook
 
   ```
   gh secret set DISCORD_WEBHOOK -e ci -r jamiemoore/tools
+  ```
+
+- The alert for the dead man's switch is configured using [healthchecks.io](https://healthchecks.io/) and the ping url is stored as a secret
+
+  ```
+  gh secret set PING_URL -e ci -r jamiemoore/tools
   ```
