@@ -81,6 +81,6 @@ jobs:
       if: always()
       with:
         username: GitHub Workflow Alert
-        content: "Hey <@ ${{ secrets.DISCORD_USER }}>"
+        content: "Hey <@${{ secrets.DISCORD_USER }}>"
         url: "https://github.com/jamiemoore/tools/actions/workflows/ci.yml"
         webhook: ${{ secrets.DISCORD_WEBHOOK }}
