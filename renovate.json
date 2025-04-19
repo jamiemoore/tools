@@ -19,5 +19,8 @@
       ],
       "semanticCommitType": "fix"
     }
-  ]
+  ],
+  "prConcurrentLimit": 1,
+  "prHourlyLimit": 60,
+  "branchConcurrentLimit": 2
 }
