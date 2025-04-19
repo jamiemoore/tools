@@ -19,6 +19,13 @@
         "Dockerfile"
       ],
       "semanticCommitType": "fix"
+    },
+    {
+      "description": ["Update .nvmrc"],
+      "matchFileNames": [".nvmrc"],
+      "matchManagers": ["nvm"],
+      "enabled": true,
+      "semanticCommitType": "build"
     }
   ],
   "lockFileMaintenance": {
