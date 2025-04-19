@@ -27,7 +27,7 @@
     {
       "matchPaths": ["package.json"],
       "postUpgradeTasks": {
-        "commands": ["npm install", "npm dedupe"],
+        "commands": ["npm install"],
         "fileFilters": ["package-lock.json"]
       }
     }
