@@ -23,8 +23,19 @@
         "Dockerfile"
       ],
       "semanticCommitType": "fix"
+    },
+    {
+      "matchPaths": ["package.json"],
+      "postUpgradeTasks": {
+        "commands": ["npm install", "npm dedupe"],
+        "fileFilters": ["package-lock.json"]
+      }
     }
   ],
+  "lockFileMaintenance": {
+    "enabled": true,
+    "schedule": "at any time"
+  },
   "prConcurrentLimit": 1,
   "prHourlyLimit": 60,
   "branchConcurrentLimit": 2
