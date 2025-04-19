@@ -11,20 +11,14 @@
 Tools for diagnosis and troubleshooting with the following features:
 
 - Interactive Shell
-
 - Package Manager
-
 - Preinstalled set of tools
-
 - Small image size
-
 - Small attack surface
-
 - Keep in sync with upstream/parent/base releases
-
-- Secure based on the above requirements
-
+- Reproducible builds (no latest)
 - Simple Dockerfile
+- Secure based on the above requirements
 
 ## Usage
 
@@ -42,11 +36,19 @@ docker run --rm jamie/tools:1.3.16 dig www.google.com
 
 ## Development
 
-Please remember to install the git hooks
+* Ensure you have docker cli working and installed
 
-```
-pre-commit install
-```
+* Perform a clean install with npm
+
+  ```
+  npm ci
+  ```
+
+- Linting
+
+  ```
+  make lint
+  ```
 
 - Building the image
 
@@ -60,7 +62,7 @@ pre-commit install
   make smoke
   ```
 
-- Running local ci pipeline (does not push the docker image)
+- Running local ci pipeline (does not perform a release and push the docker image)
 
   ```
   make ci
