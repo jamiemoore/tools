@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.17](https://github.com/jamiemoore/tools/compare/v1.3.16...v1.3.17) (2025-04-19)
+
+
+### Bug Fixes
+
+* **deps:** bump actions/setup-node from 3 to 4 ([#12](https://github.com/jamiemoore/tools/issues/12)) ([b675531](https://github.com/jamiemoore/tools/commit/b6755311fdc199f0def160dbc679825c2633d18f))
+
 ## [1.3.16](https://github.com/jamiemoore/tools/compare/v1.3.15...v1.3.16) (2025-04-18)
 
 
