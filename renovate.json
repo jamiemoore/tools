@@ -32,5 +32,8 @@
   },
   "prConcurrentLimit": 1,
   "prHourlyLimit": 60,
-  "branchConcurrentLimit": 2
+  "branchConcurrentLimit": 2,
+  "nvmrc": {
+    "enabled": true
+  }
 }
