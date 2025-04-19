@@ -11,8 +11,12 @@
       ]
     },
     {
-      "matchDatasources": ["docker"],
-      "matchPaths": ["Dockerfile"],
+      "matchDatasources": [
+        "docker"
+      ],
+      "matchFileNames": [
+        "Dockerfile"
+      ],
       "semanticCommitType": "fix"
     }
   ]
