@@ -23,8 +23,5 @@
     "bats": "1.11.1",
     "markdownlint-cli": "0.44.0",
     "yaml-lint": "1.7.0"
-  },
-  "engines": {
-    "node": "23.11.0"
   }
 }

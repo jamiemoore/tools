@@ -12,10 +12,6 @@
       ]
     },
     {
-      "matchDepTypes": ["engines"],
-      "enabled": true
-    },
-    {
       "matchDatasources": [
         "docker"
       ],
