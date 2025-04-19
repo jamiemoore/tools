@@ -23,13 +23,6 @@
         "Dockerfile"
       ],
       "semanticCommitType": "fix"
-    },
-    {
-      "matchPaths": ["package.json"],
-      "postUpgradeTasks": {
-        "commands": ["npm install"],
-        "fileFilters": ["package-lock.json"]
-      }
     }
   ],
   "lockFileMaintenance": {
