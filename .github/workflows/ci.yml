@@ -32,7 +32,7 @@ jobs:
     - name: Setup node 
       uses: actions/setup-node@v4
       with:
-        node-version-file: 'package.json'
+        node-version-file: '.nvmrc'
 
     - name: npm clean install
       run: npm ci
