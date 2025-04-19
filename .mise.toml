@@ -1,0 +1,8 @@
+[tools]
+# Using .nvmrc
+
+[hooks]
+enter = "mise install -q"
+
+[env]
+_.path = ['{{config_root}}/node_modules/.bin']
