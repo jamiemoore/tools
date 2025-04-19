@@ -3,12 +3,17 @@
   "extends": [
     "config:recommended"
   ],
+  "rangeStrategy": "pin",
   "packageRules": [
     {
       "automerge": true,
       "matchPackageNames": [
         "/.*/"
       ]
+    },
+    {
+      "matchDepTypes": ["engines"],
+      "enabled": true
     },
     {
       "matchDatasources": [
