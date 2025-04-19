@@ -34,7 +34,7 @@ jobs:
       with:
         node-version-file: 'package.json'
 
-    - name: Install dependencies
+    - name: npm clean install
       run: npm ci
 
     - name: lint

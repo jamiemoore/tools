@@ -26,6 +26,9 @@ jobs:
       with:
         node-version-file: 'package.json'
 
+    - name: npm clean install
+      run: npm ci
+
     - name: lint
       run: make lint
 
