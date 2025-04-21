@@ -29,7 +29,7 @@ pre-commit:
       run: dockerlinter -f {files}
       # run: dockerlinter -e -f {files}
     eslint:
-      files: git diff --name-only --staged main
+      files: git diff --name-only --staged HEAD
       glob:
         - "*.json"
         - "*.yaml"
