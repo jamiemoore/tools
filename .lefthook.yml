@@ -7,23 +7,23 @@ pre-commit:
   parallel: true
   commands:
     renovate:
-      files: git diff --name-only --staged main
+      files: git diff --name-only --staged HEAD
       glob:
         - "renovate.json"
       run: renovate-config-validator
     npm-audit:
-      files: git diff --name-only --staged main
+      files: git diff --name-only --staged HEAD
       glob:
         - "package.json"
         - "package-lock.json"
       run: npm audit
     yaml-lint:
-      files: git diff --name-only --staged main
+      files: git diff --name-only --staged HEAD
       glob:
         - "*.yml"
       run: yamllint {files}
     dockerlinter:
-      files: git diff --name-only --staged main
+      files: git diff --name-only --staged HEAD
       glob:
         - "Dockerfile"
       run: dockerlinter -f {files}
