@@ -6,25 +6,24 @@
   "rangeStrategy": "pin",
   "packageRules": [
     {
+      "matchManagers": ["dockerfile"],
       "automerge": true,
-      "matchPackageNames": [
-        "/.*/"
-      ]
+      "semanticCommitType": "fix",
+      "matchFileNames": [ "Dockerfile" ]
     },
     {
-      "matchDatasources": [
-        "docker"
-      ],
-      "matchFileNames": [
-        "Dockerfile"
-      ],
-      "semanticCommitType": "fix"
+      "matchManagers": ["github-actions"],
+      "automerge": true,
+      "semanticCommitType": "build"
     },
     {
-      "description": ["Update .nvmrc"],
-      "matchFileNames": [".nvmrc"],
       "matchManagers": ["nvm"],
-      "enabled": true,
+      "automerge": true,
+      "semanticCommitType": "build"
+    },
+    {
+      "matchManagers": ["npm"],
+      "automerge": true,
       "semanticCommitType": "build"
     }
   ],

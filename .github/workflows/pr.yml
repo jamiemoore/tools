@@ -3,6 +3,7 @@ name: pr
 
 on:
   pull_request:
+    branches: ["main"]
 
 permissions:
   contents: read
@@ -21,10 +22,10 @@ jobs:
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v3
 
-    - name: Setup node 
+    - name: Setup node
       uses: actions/setup-node@v4
       with:
-        node-version-file: 'package.json'
+        node-version-file: '.nvmrc'
 
     - name: npm clean install
       run: npm ci

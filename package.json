@@ -2,6 +2,7 @@
   "name": "tools",
   "version": "1.0.0",
   "description": "[![Build Status](https://github.com/jamiemoore/tools/workflows/ci/badge.svg)](https://github.com/jamiemoore/tools/actions/workflows/ci.yml) [![healthchecks.io](https://healthchecks.io/badge/27bf2f53-c0ef-4517-86df-6b10f21c732e/CpsP3JLr-2.svg)](https://healthchecks.io/) [![Docker Image Version](https://img.shields.io/docker/v/jamie/tools)](https://hub.docker.com/r/jamie/tools) [![Docker Image Size](https://img.shields.io/docker/image-size/jamie/tools)](https://hub.docker.com/r/jamie/tools) [![Docker Image Pulls](https://img.shields.io/docker/pulls/jamie/tools)](https://hub.docker.com/r/jamie/tools) [![Docker Image Stars](https://img.shields.io/docker/stars/jamie/tools)](https://hub.docker.com/r/jamie/tools) [![License](https://img.shields.io/github/license/jamiemoore/tools)](https://opensource.org/licenses/MIT)",
+  "type": "module",
   "directories": {
     "test": "tests"
   },
@@ -21,7 +22,18 @@
   "homepage": "https://github.com/jamiemoore/tools#readme",
   "devDependencies": {
     "bats": "1.11.1",
+    "dockerlinter": "^1.2.2",
+    "eslint": "^9.25.0",
+    "eslint-plugin-json": "^4.0.1",
+    "eslint-plugin-toml": "^0.12.0",
+    "eslint-plugin-yml": "^1.17.0",
+    "lefthook": "^1.11.10",
     "markdownlint-cli": "0.44.0",
-    "yaml-lint": "1.7.0"
+    "renovate": "^39.251.0",
+    "yaml-lint": "^1.7.0"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2",
+    "tar-stream": "^3.1.7"
   }
 }

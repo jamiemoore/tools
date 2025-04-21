@@ -16,14 +16,15 @@ help:  ## Display this help
 	@awk 'BEGIN {FS = ":.*##"; printf "\nUsage:\n  make \033[36m<target>\033[0m\n\nTargets:\n"} /^[a-zA-Z_-]+:.*?##/ { printf "  \033[36m%-10s\033[0m %s\n", $$1, $$2 }' $(MAKEFILE_LIST)
 
 lint: ## lint
-	@echo "yes it is me lint"
-#	$(LOCALBIN)/yamllint **/*.yaml **/*.yml
-#	$(LOCALBIN)/markdownlint *.md
+	@lefthook run pre-commit commit-msg
 
-ci: build test ## Run the CI pipeline locally but don't push an artifact
+ci: lint build test ## Run the CI pipeline locally but don't push an artifact
 
-build: ## Build Dockerfile
+build: uav ## Build Dockerfile
 	@docker buildx build --output type=docker -t $(IMAGE_NAME):$(IMAGE_TAG) -f $(DOCKER_FILE) .
+
+uav: ## update the versions of the apk packages in the Dockerfile
+	@node update-apk-versions.js
 
 test: smoke ## Run all tests
 
@@ -33,7 +34,7 @@ history: ## Get the size of the layers
 clean: ## Clean up after build
 	@docker rmi $(IMAGE_NAME):$(IMAGE_TAG)
 
-run: ## Run Dockerfile
+run: build ## Run Dockerfile
 	@docker run -it --rm $(IMAGE_NAME):$(IMAGE_TAG)
 
 smoke: ## Run smoke tests
