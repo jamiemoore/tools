@@ -1,5 +1,17 @@
 # Changelog
 
+# [1.4.0](https://github.com/jamiemoore/tools/compare/v1.3.18...v1.4.0) (2025-04-21)
+
+
+### Bug Fixes
+
+* add node modules to ci ([6e43537](https://github.com/jamiemoore/tools/commit/6e435374bb7b3fcf91cb4874b6a3cec4f97ba257))
+
+
+### Features
+
+* pinned packages ([d0a63a0](https://github.com/jamiemoore/tools/commit/d0a63a038c3ea12bf383d1640595219956cb29a6))
+
 ## [1.3.18](https://github.com/jamiemoore/tools/compare/v1.3.17...v1.3.18) (2025-04-19)
 
 

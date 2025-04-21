@@ -27,13 +27,13 @@ Tools for diagnosis and troubleshooting with the following features:
 Interactive Shell
 
 ```
-docker run -it --rm jamie/tools:1.3.18
+docker run -it --rm jamie/tools:1.4.0
 ```
 
 Running a tool within the container
 
 ```
-docker run --rm jamie/tools:1.3.18 dig www.google.com
+docker run --rm jamie/tools:1.4.0 dig www.google.com
 ```
 
 ## Development
