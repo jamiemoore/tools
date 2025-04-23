@@ -26,7 +26,7 @@
     "eslint": "9.25.1",
     "eslint-plugin-json": "4.0.1",
     "eslint-plugin-toml": "0.12.0",
-    "eslint-plugin-yml": "1.17.0",
+    "eslint-plugin-yml": "1.18.0",
     "lefthook": "1.11.11",
     "markdownlint-cli": "0.44.0",
     "renovate": "39.254.2",
