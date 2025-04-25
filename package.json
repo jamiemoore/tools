@@ -29,7 +29,7 @@
     "eslint-plugin-yml": "1.18.0",
     "lefthook": "1.11.11",
     "markdownlint-cli": "0.44.0",
-    "renovate": "39.257.8",
+    "renovate": "39.258.0",
     "yaml-lint": "1.7.0"
   },
   "dependencies": {
