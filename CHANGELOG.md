@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.2](https://github.com/jamiemoore/tools/compare/v1.4.1...v1.4.2) (2025-07-16)
+
+
+### Bug Fixes
+
+* **deps:** update alpine docker tag to v3.22.1 ([#320](https://github.com/jamiemoore/tools/issues/320)) ([4144ac9](https://github.com/jamiemoore/tools/commit/4144ac9a98843e98b06e3107b92efdcf67383cee))
+
 ## [1.4.1](https://github.com/jamiemoore/tools/compare/v1.4.0...v1.4.1) (2025-05-31)
 
 
