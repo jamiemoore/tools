@@ -1,4 +1,4 @@
-FROM alpine:3.22.2
+FROM alpine:3.23.3
 RUN apk add --no-cache \
     curl=8.12.1-r1 \
     iputils=20240905-r0 \
