@@ -23,7 +23,7 @@
   "devDependencies": {
     "bats": "1.13.0",
     "dockerlinter": "1.2.2",
-    "eslint": "9.39.4",
+    "eslint": "10.2.0",
     "eslint-plugin-json": "4.0.1",
     "eslint-plugin-toml": "0.13.1",
     "eslint-plugin-yml": "1.19.1",
